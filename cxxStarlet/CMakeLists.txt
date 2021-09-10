@@ -20,7 +20,7 @@ pkg_check_modules(CFITSIO REQUIRED cfitsio)
 # Downloads and compiles the Boost.NumPy package
 # The library and include files are located in the build/extern directory
 ExternalProject_Add(BoostNumpy
-    GIT_REPOSITORY https://github.com/ndarray/Boost.NumPy
+    GIT_REPOSITORY https://github.com/ruizca/Boost.NumPy
     CMAKE_ARGS     -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/extern
                    -DLIBRARY_TYPE=STATIC
 )
@@ -47,8 +47,8 @@ link_directories(${BoostNumpy_LIBRARY_DIRS} ${GSL_LIBRARY_DIRS} ${CFITSIO_LIBRAR
 #  set(CMAKE_CXX_FLAGS "-O3 -fomit-frame-pointer -fno-common -fPIC -fopenmp")
 #endif()
 
-set(CMAKE_CXX_FLAGS "-O3 -fomit-frame-pointer -fno-common -fPIC -fopenmp -DRW_PYTHON_INTERFACE -F/Library/Frameworks -arch x86_64") # For MAC
-#set(CMAKE_CXX_FLAGS "-O3 -fomit-frame-pointer -fno-common -fPIC -fopenmp -DRW_PYTHON_INTERFACE") # For Linux
+#set(CMAKE_CXX_FLAGS "-O3 -fomit-frame-pointer -fno-common -fPIC -fopenmp -DRW_PYTHON_INTERFACE -F/Library/Frameworks -arch x86_64") # For MAC
+set(CMAKE_CXX_FLAGS "-O3 -fomit-frame-pointer -fno-common -fPIC -fopenmp -DRW_PYTHON_INTERFACE") # For Linux
 
 # Build the tools module
 add_library(sparse2d SHARED sparse2d/cxx/sparse2d.cpp sparse2d/cxx/starlet2d.cpp)
