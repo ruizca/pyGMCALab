@@ -41,7 +41,7 @@
 #include <stdio.h>
 
 //math macros
-#define max(A, B) (A > B ? A : B)
+//#define max(A, B) (A > B ? A : B)
 #define ABS(x) (x<0?-x:x)
 #define isint(x) ((x - floor(x)) > 0.0 ? 0 : 1)
 

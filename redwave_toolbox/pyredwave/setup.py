@@ -1,5 +1,4 @@
 # -\*- coding: utf-8 -\*-
-
 r"""
 setup.py - This file is part of pygmca.
 The pygmca package aims at performing non-negative matrix factorization.
@@ -40,26 +39,29 @@ __url__ = "http://www.cosmostat.org/GMCALab.html"
 __copyright__ = "(c) 2014 CEA"
 __license__ = "CeCill"
 
+import os
+import subprocess
 from distutils.command.build_py import build_py as _build_py
 from distutils.core import setup
-from subprocess import call
-import os
 
 
 class build_py(_build_py):
     """Specialized Python source builder."""
+
     def run(self):
-        os.environ['CC'] = 'gcc'
-        os.environ['CXX'] = 'g++'
-        call(["mkdir", "-p", "build"])
-        call(["cmake", "-H.", "-Bbuild"])
-        call(["make", "-Cbuild", "install"])
+        os.environ["CC"] = "gcc"
+        os.environ["CXX"] = "g++"
+        subprocess.call(["mkdir", "-p", "build"])
+        subprocess.call(["cmake", "-H.", "-Bbuild"])
+        subprocess.call(["make", "-Cbuild", "install"])
         _build_py.run(self)
 
-setup(name='pyredwave',
-      version='1.0',
-      description='lol',
-      packages=['pyredwave'],
-      package_data={'pyredwave': ['pyredwave.so']},
-      cmdclass={'build_py': build_py}
-      )
+
+setup(
+    name="pyredwave",
+    version="1.0",
+    description="lol",
+    packages=["pyredwave"],
+    package_data={"pyredwave": ["redwavecxx.so"]},
+    cmdclass={"build_py": build_py},
+)

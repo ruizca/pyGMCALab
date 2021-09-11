@@ -1,5 +1,4 @@
 # -\*- coding: utf-8 -\*-
-
 r"""
 __init__.py - This file is part of pygmca.
 The pygmca package aims at performing non-negative matrix factorization.
@@ -40,6 +39,4 @@ __url__ = "http://www.cosmostat.org/GMCALab.html"
 __copyright__ = "(c) 2014 CEA"
 __license__ = "CeCill"
 
-# -*- coding: utf-8 -*-
-
-from redwave import RedWave, mad_std
+from .redwave import RedWave, mad_std
