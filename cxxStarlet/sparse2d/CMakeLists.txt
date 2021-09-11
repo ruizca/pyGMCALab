@@ -56,3 +56,8 @@ add_dependencies(sparse2d BoostNumpy)
 target_link_libraries(sparse2d ${BoostNumpy_LIBRARIES} ${Boost_LIBRARIES} ${GSL_LIBRARIES} ${PYTHON_LIBRARIES})
 set_target_properties(sparse2d PROPERTIES SUFFIX .so)
 set_target_properties(sparse2d PROPERTIES PREFIX "")
+
+# Installs the module inside the python package 
+set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR})
+
+install(TARGETS sparse2d DESTINATION sparse2d)
