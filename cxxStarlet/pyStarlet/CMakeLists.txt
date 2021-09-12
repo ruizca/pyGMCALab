@@ -51,7 +51,7 @@ link_directories(${BoostNumpy_LIBRARY_DIRS} ${GSL_LIBRARY_DIRS} ${CFITSIO_LIBRAR
 set(CMAKE_CXX_FLAGS "-O3 -fomit-frame-pointer -fno-common -fPIC -fopenmp -DRW_PYTHON_INTERFACE") # For Linux
 
 # Build the tools module
-add_library(sparse2d SHARED sparse2d/cxx/sparse2d.cpp sparse2d/cxx/starlet2d.cpp)
+add_library(sparse2d SHARED pyStarlet/cxx/sparse2d.cpp pyStarlet/cxx/starlet2d.cpp)
 add_dependencies(sparse2d BoostNumpy)
 target_link_libraries(sparse2d ${BoostNumpy_LIBRARIES} ${Boost_LIBRARIES} ${GSL_LIBRARIES} ${PYTHON_LIBRARIES})
 set_target_properties(sparse2d PROPERTIES SUFFIX .so)
@@ -60,4 +60,4 @@ set_target_properties(sparse2d PROPERTIES PREFIX "")
 # Installs the module inside the python package 
 set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR})
 
-install(TARGETS sparse2d DESTINATION sparse2d)
+install(TARGETS sparse2d DESTINATION pyStarlet)

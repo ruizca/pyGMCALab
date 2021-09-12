@@ -58,10 +58,10 @@ class build_py(_build_py):
 
 
 setup(
-    name="sparse2d",
+    name="pyStarlet",
     version="1.0",
     description="lol",
-    packages=["sparse2d"],
-    package_data={"sparse2d": ["sparse2d.so"]},
+    packages=["pyStarlet"],
+    package_data={"pyStarlet": ["sparse2d.so"]},
     cmdclass={"build_py": build_py},
 )
