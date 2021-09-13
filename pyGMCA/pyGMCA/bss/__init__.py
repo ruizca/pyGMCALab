@@ -39,9 +39,8 @@
 # __url__ = "http://www.cosmostat.org/GMCALab.html"
 # __copyright__ = "(c) 2017 CEA"
 # __license__ = "CeCill"
-
-# from . import amca
-# from . import gmca
-# from . import rgmca
-# from . import tr_rgmca
-# from . import ngmca
+from . import amca
+from . import gmca
+from . import rgmca
+from . import tr_rgmca
+from . import ngmca

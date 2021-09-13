@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Building of the components, whose parameters are set in the file paremeters.
+Building of the components, whose parameters are set in the file parameters.
 """
 import numpy as np
 from scipy.fftpack import idct
 from scipy.stats import bernoulli
 
-from .parameters import *
+from .parameters import dS
 
 
 def sources():

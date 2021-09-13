@@ -39,6 +39,6 @@
 # __url__ = "http://www.cosmostat.org/GMCALab.html"
 # __copyright__ = "(c) 2015 CEA"
 # __license__ = "CeCill"
-# from . import base
-# from . import core
-# from . import proximal
+from . import base
+from . import core
+from . import proximal

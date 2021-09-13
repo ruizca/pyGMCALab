@@ -40,6 +40,7 @@ For installing pyGMCALab, clone or download this repository and go to the pyGMCA
     > cd pyGMCA
     > python setup.py install
 
+***
 
 ### The GMCA algorithm (Generalized Morphological Component Analysis)
 It tackles sparse blind source separation (BSS) problems of the form:

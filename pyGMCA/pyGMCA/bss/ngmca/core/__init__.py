@@ -39,6 +39,6 @@
 # __url__ = "http://www.cosmostat.org/GMCALab.html"
 # __copyright__ = "(c) 2015 CEA"
 # __license__ = "CeCill"
-#
-#from . import algorithm, tools
+from . import algorithm
+from . import tools
 from .algorithm import Algorithm

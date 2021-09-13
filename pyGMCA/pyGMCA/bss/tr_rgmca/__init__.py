@@ -39,3 +39,8 @@
 # __url__ = "http://www.cosmostat.org/GMCALab.html"
 # __copyright__ = "(c) 2017 CEA"
 # __license__ = "CeCill"
+from . import outliersPursuit
+from . import XMCA
+from . import data
+from . import errors
+from . import parameters

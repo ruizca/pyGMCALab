@@ -39,3 +39,10 @@
 # __url__ = "http://www.cosmostat.org/GMCALab.html"
 # __copyright__ = "(c) 2017 CEA"
 # __license__ = "CeCill"
+from . import AGMCA
+from . import BetaD_ICA
+from . import FunBetaD
+from . import rpcaAlgo
+from . import data
+from . import errors
+from . import parameters

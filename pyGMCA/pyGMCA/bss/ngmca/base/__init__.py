@@ -40,6 +40,6 @@
 # __copyright__ = "(c) 2015 CEA"
 # __license__ = "CeCill"
 
-# from . import algos
-# from . import tools
-# from . import sample_nmr_spectra
+from . import algos
+from . import tools
+from . import sample_nmr_spectra
